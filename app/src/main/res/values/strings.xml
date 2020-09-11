@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Quizzler</string>
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="Initial_score">Score 0/13</string>
+
+    <string name="incorrect_toast">Wrong!</string>
+    <string name="correct_toast">You got it!</string>
+    <string name="question_1">Valentine\'s day is banned in Saudi Arabia</string>
+    <string name="question_2">A slug\'s blood is green</string>
+    <string name="question_3">Approxiamately one quarter of the human bones are in the feet</string>
+    <string name="question_4">The total surface area of two human lungs is approximately 70 square meter</string>
+    <string name="question_5">In West virginia ,USA, if you accidentally hit an animal with your car</string>
+    <string name="question_6">In london, UK, if you happen to die in the house of Parliament,your bones will be crushed.</string>
+    <string name="question_7">It is illegal to pee in the ocean in Portugal.</string>
+    <string name="question_8">You can lead a cow down stairs but not upstairs.</string>
+    <string name="question_9">Google was originally called \"Backrub\". </string>
+    <string name="question_10">Buzz aldrin\'s mother\'s maiden name was Moon</string>
+</resources>

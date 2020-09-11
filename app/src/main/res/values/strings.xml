@@ -2,7 +2,7 @@
     <string name="app_name">Quizzler</string>
     <string name="true_button">True</string>
     <string name="false_button">False</string>
-    <string name="Initial_score">Score 0/13</string>
+    <string name="Initial_score">Score 0/10</string>
 
     <string name="incorrect_toast">Wrong!</string>
     <string name="correct_toast">You got it!</string>

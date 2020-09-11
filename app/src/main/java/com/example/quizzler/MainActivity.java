@@ -1,7 +1,9 @@
 package com.example.quizzler;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -69,6 +71,19 @@ public class MainActivity extends AppCompatActivity {
     }
     private void UpdateQuestion(){
         mIndex = (mIndex+1)%mQuestionBank.length;
+        if(mIndex==0){
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.setTitle("Game Over");
+            alert.setCancelable(false);
+            alert.setMessage("You scored"+mScore+"points!");
+            alert.setPositiveButton("Close Application", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    finish();
+                }
+            });
+            alert.show();
+        }
         mQuestion = mQuestionBank[mIndex].getQuestionID();
         mQuestionTextView.setText(mQuestion);
         mProgressBar.incrementProgressBy(PROGRESS_BAR_INCREMENT);

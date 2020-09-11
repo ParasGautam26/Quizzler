@@ -1,5 +1,6 @@
 package com.example.quizzler;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if(savedInstanceState!=null){
+            mScore = savedInstanceState.getInt("Score key");
+            mIndex = savedInstanceState.getInt("index key");
+        }
+        else{
+            mScore = 0;
+            mIndex = 0;
+        }
 
         mTrueButton = findViewById(R.id.button);
         mFalseButton = findViewById(R.id.button2);
@@ -49,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         mQuestion = mQuestionBank[mIndex].getQuestionID();
         mQuestionTextView.setText(mQuestion);
+        mScoreTextView.setText("Score "+mScore+"/"+mQuestionBank.length);
 
 
         mTrueButton.setOnClickListener(new View.OnClickListener() {
@@ -99,5 +109,12 @@ public class MainActivity extends AppCompatActivity {
         else{
             Toast.makeText(this,R.string.incorrect_toast, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("Score key",mScore);
+        outState.putInt("Index key",mIndex);
     }
 }
